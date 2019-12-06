@@ -37,7 +37,7 @@
             android:layout_marginTop="120dp"
             android:layout_marginBottom="32dp"
             android:background="@color/emergencyRed"
-            android:drawableEnd="@drawable/ic_add_emergency_white"
+            android:drawableStart="@drawable/ic_add_emergency_white"
             android:drawablePadding="2dip"
             android:gravity="center"
             android:paddingStart="30dip"

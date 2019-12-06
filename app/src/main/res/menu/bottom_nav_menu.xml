@@ -5,10 +5,10 @@
     <item
         android:id="@+id/emergency"
         android:title="@string/emergency"
-        android:icon="@drawable/ic_eme_black"/>
+        android:icon="@drawable/ic_add_emergency_white"/>
     <item
         android:id="@+id/chatting"
         android:title="@string/chat"
-        android:icon="@drawable/ic_chat_black"/>
+        android:icon="@drawable/ic_chat_white"/>
 
 </menu>

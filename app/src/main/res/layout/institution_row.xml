@@ -14,14 +14,16 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/organization_picture"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="16dp"
-            app:placeholderImage="@drawable/profile"
-            app:placeholderImageScaleType="centerCrop"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:padding="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.487"
+            app:placeholderImage="@drawable/profile"
+            app:placeholderImageScaleType="centerCrop"
             app:roundAsCircle="true"
             app:roundedCornerRadius="8dp"/>
 
@@ -52,11 +54,24 @@
             android:id="@+id/organization_speciality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="32dp"
             android:text="@string/speciality"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageButton"
+            app:layout_constraintStart_toStartOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/organization_speciality"
+            app:srcCompat="@drawable/ic_chat_red"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

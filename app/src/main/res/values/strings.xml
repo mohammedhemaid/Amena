@@ -13,5 +13,8 @@
     <string name="emergency_cancel">Cancel The Emergency </string>
     <string name="tab_to_start_the_emergency">Tab to start the emergency</string>
     <string name="children_number">Children Number</string>
+    <string name="search">Search</string>
+    <string name="no_lists_message">Click the chat button to create a chat!</string>
+    <string name="lorem_ipsum">هي خدمة إلكترونية مقدمة من وزارة العدل يقوم الزوج بتسجيل بيانات العقد وطلب حجز موعد مع المأذون عن طريق الخدمة ليتم إكمال عقد الزواج</string>
 
 </resources>

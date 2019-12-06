@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <color name="colorPrimary">#fff</color>
+    <color name="colorPrimary">#fff</color>
     <color name="colorPrimaryDark">#fff</color>
-    <color name="colorAccent">#000</color>
+    <color name="colorAccent">#E53935</color>
     <color name="twitterBlue">#00C3F3</color>
     <color name="facebookBlue">#2D609B</color>
     <color name="tabBarGrey">#F9F9FA</color>
@@ -14,4 +14,6 @@
     <color name="textColorGray">#D8D8D8</color>
     <color name="textColorRed">#E72222</color>
     <color name="emergencyRed">#E53935</color>
+    <color name="colorTransparentBlack">#80000000</color>
+
 </resources>

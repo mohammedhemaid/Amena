@@ -7,6 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/tabBarGrey"
         android:layout_height="wrap_content">
 
         <TextView
@@ -18,8 +19,7 @@
             android:text="TextView"
             android:padding="8dp"
             android:textColor="@android:color/black"
-
-            android:background="@android:color/white"
+            android:background="@drawable/bg_receiver_msg"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:background="@color/tabBarGrey"
+            android:background="@drawable/bg_sender_msg"
             android:padding="8dp"
             android:text="TextView"
             android:textColor="@android:color/black"

@@ -8,7 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 
 import com.app.wihack.amina.R;
-import com.app.wihack.amina.chatting.IBind;
+import com.app.wihack.amina.commonAdapter.IBind;
 import com.app.wihack.amina.institutionsprofile.InstitutionsProfileActivity_;
 import com.facebook.drawee.view.SimpleDraweeView;
 

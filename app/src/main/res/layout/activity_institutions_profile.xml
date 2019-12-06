@@ -194,7 +194,7 @@
                 android:singleLine="true"
                 android:text="@string/chat_with_amina"
                 android:textColor="@android:color/white"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

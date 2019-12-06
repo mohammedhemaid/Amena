@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.wihack.amina.AddOrgChatting.AddInstitutionChattingActivity_;
 import com.app.wihack.amina.R;
+import com.app.wihack.amina.commonAdapter.RecycleViewAdapter;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -28,7 +29,7 @@ public class ChattingFragment extends Fragment {
     public void after() {
         adapter = new RecycleViewAdapter();
         adapter.setData(new ArrayList<>());
-        adapter.setRecycleViewRes(R.layout.institution_row);
+        adapter.setRecycleViewRes(R.layout.row_institution);
         institutesListRecyclerView.setAdapter(adapter);
     }
 

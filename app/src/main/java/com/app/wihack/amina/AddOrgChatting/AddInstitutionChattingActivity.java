@@ -1,5 +1,8 @@
 package com.app.wihack.amina.AddOrgChatting;
 
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,4 +30,12 @@ public class AddInstitutionChattingActivity extends AppCompatActivity {
         institutesListRecyclerView.setAdapter(adapter);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

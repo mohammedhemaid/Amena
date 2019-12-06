@@ -16,5 +16,9 @@
     <string name="search">Search</string>
     <string name="no_lists_message">Click the chat button to create a chat!</string>
     <string name="lorem_ipsum">هي خدمة إلكترونية مقدمة من وزارة العدل يقوم الزوج بتسجيل بيانات العقد وطلب حجز موعد مع المأذون عن طريق الخدمة ليتم إكمال عقد الزواج</string>
+    <string name="mobile">Mobile</string>
+    <string name="dummy_mobile">+972 59 97951915</string>
+    <string name="email_dummy">info@aisha.ps</string>
+    <string name="chat_with_amina">Chat with Amina</string>
 
 </resources>

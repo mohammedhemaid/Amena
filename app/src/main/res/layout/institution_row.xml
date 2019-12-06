@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.app.wihack.amina.chatting.InstitutionRow_
+<com.app.wihack.amina.AddOrgChatting.InstitutionRow_
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -75,4 +75,4 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.app.wihack.amina.chatting.InstitutionRow_>
+</com.app.wihack.amina.AddOrgChatting.InstitutionRow_>

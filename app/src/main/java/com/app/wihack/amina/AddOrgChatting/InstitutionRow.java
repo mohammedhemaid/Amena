@@ -9,7 +9,7 @@ import androidx.cardview.widget.CardView;
 
 import com.app.wihack.amina.R;
 import com.app.wihack.amina.chatting.IBind;
-import com.app.wihack.amina.institutionsprofile.InstitutionsProfileActivity;
+import com.app.wihack.amina.institutionsprofile.InstitutionsProfileActivity_;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import org.androidannotations.annotations.Click;
@@ -32,7 +32,7 @@ public class InstitutionRow extends CardView implements IBind {
     }
 
     @Click(R.id.organization_picture)
-    public void openInstitutionProfile(){
-
+    public void openInstitutionProfile() {
+        InstitutionsProfileActivity_.intent(getContext()).start();
     }
 }

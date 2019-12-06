@@ -14,6 +14,7 @@
     <color name="textColorGray">#D8D8D8</color>
     <color name="textColorRed">#E72222</color>
     <color name="emergencyRed">#E53935</color>
-    <color name="colorTransparentBlack">#80000000</color>
+    <color name="colorTransparentBlack">#66000000</color>
+    <color name="colorTransparentBlackEnd">#33000000</color>
 
 </resources>

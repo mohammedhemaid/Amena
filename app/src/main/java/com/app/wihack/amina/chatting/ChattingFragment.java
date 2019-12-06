@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 @EFragment(R.layout.fragment_chatting)
 public class ChattingFragment extends Fragment {
-    @ViewById(R.id.institutes_list) RecyclerView instutesListRecyclerView;
+    @ViewById(R.id.institutes_list) RecyclerView institutesListRecyclerView;
 
     RecycleViewAdapter adapter;
 
@@ -28,6 +28,6 @@ public class ChattingFragment extends Fragment {
         adapter.setData(new ArrayList<>());
         adapter.setRecycleViewRes(R.layout.institution_row);
 
-        instutesListRecyclerView.setAdapter(adapter);
+        institutesListRecyclerView.setAdapter(adapter);
     }
 }

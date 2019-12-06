@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.app.wihack.amina.InstitutionRow_
+<com.app.wihack.amina.chatting.InstitutionRow_
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,25 +12,47 @@
         android:layout_height="match_parent">
 
         <com.facebook.drawee.view.SimpleDraweeView
-            android:id="@+id/simpleDraweeView"
+            android:id="@+id/organization_picture"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:roundedCornerRadius="8dp"
-            />
+            app:roundedCornerRadius="8dp"/>
 
         <TextView
+            android:id="@+id/organization_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/app_name"
-            app:layout_constraintBottom_toBottomOf="@+id/simpleDraweeView"
-            app:layout_constraintStart_toEndOf="@+id/simpleDraweeView"
-            app:layout_constraintTop_toTopOf="@+id/simpleDraweeView"/>
+            app:layout_constraintBottom_toBottomOf="@+id/organization_picture"
+            app:layout_constraintStart_toEndOf="@+id/organization_picture"
+            app:layout_constraintTop_toTopOf="@+id/organization_picture"
+            app:layout_constraintVertical_bias="0.060000002"/>
+
+        <TextView
+            android:id="@+id/organization_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_location_on_black"
+            android:text="@string/location"
+            app:layout_constraintStart_toEndOf="@+id/organization_picture"
+            app:layout_constraintTop_toBottomOf="@+id/organization_name"/>
+
+        <TextView
+            android:id="@+id/organization_speciality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/speciality"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.app.wihack.amina.InstitutionRow_>
+</com.app.wihack.amina.chatting.InstitutionRow_>

@@ -25,7 +25,7 @@ public class ChattingFragment extends Fragment {
     @AfterViews
     public void after() {
         adapter = new RecycleViewAdapter();
-        adapter.setData(new ArrayList<>());
+        adapter.setData(OrganizationProfile.getOrganizationProfiles());
         adapter.setRecycleViewRes(R.layout.institution_row);
 
         institutesListRecyclerView.setAdapter(adapter);

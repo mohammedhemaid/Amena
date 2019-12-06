@@ -10,6 +10,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [
@@ -43,5 +45,17 @@ dependencies {
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
 
     implementation 'com.facebook.fresco:fresco:2.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.0'
+
+    // Firebase Core
+    implementation 'com.google.firebase:firebase-core:17.2.1'
+    //Firebase Authentication
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    // Firestore Firestore
+    implementation 'com.google.firebase:firebase-firestore:21.3.0'
+
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
 
 }

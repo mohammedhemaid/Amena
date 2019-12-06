@@ -13,4 +13,5 @@
     <color name="colorLightGrey">#F8F9FB</color>
     <color name="textColorGray">#D8D8D8</color>
     <color name="textColorRed">#E72222</color>
+    <color name="emergencyRed">#E53935</color>
 </resources>

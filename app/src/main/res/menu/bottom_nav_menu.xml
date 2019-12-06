@@ -3,11 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/emergency"
         android:title="@string/emergency"
         android:icon="@drawable/ic_eme_black"/>
     <item
-        android:id="@+id/services"
+        android:id="@+id/chatting"
         android:title="@string/chat"
         android:icon="@drawable/ic_chat_black"/>
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,9 +17,12 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
+            app:placeholderImage="@drawable/profile"
+            app:placeholderImageScaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:roundAsCircle="true"
             app:roundedCornerRadius="8dp"/>
 
         <TextView
@@ -39,6 +43,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
             android:drawableStart="@drawable/ic_location_on_black"
+            android:drawablePadding="4dp"
             android:text="@string/location"
             app:layout_constraintStart_toEndOf="@+id/organization_picture"
             app:layout_constraintTop_toBottomOf="@+id/organization_name"/>

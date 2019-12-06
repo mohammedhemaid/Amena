@@ -9,8 +9,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="location">location</string>
     <string name="speciality">speciality</string>
-    <string name="don_t_panic_stay_calm">Don\'t Panic Sarah Stay Calm</string>
+    <string name="don_t_panic_stay_calm">Don\'t Panic Sarah, Stay Calm</string>
     <string name="emergency_cancel">Cancel The Emergency </string>
     <string name="tab_to_start_the_emergency">Tab to start the emergency</string>
+    <string name="children_number">Children Number</string>
 
 </resources>

@@ -6,6 +6,7 @@ public class Messages {
 
 
     private String from, message;
+    static ArrayList<Messages> listOfMessages = new ArrayList<>();
 
 
     public Messages() {
@@ -16,14 +17,12 @@ public class Messages {
         this.message = message;
     }
 
+    public static void setListOfMessages(String id , String message) {
+
+        listOfMessages.add(new Messages(id,message));
+    }
+
     public static ArrayList<Messages> getListMessages() {
-
-        ArrayList<Messages> listOfMessages = new ArrayList<>();
-        listOfMessages.add(new Messages("1", "hello"));
-        listOfMessages.add(new Messages("2", "hello"));
-        listOfMessages.add(new Messages("1", "can you help me?"));
-        listOfMessages.add(new Messages("2", "yes, of course"));
-
         return listOfMessages;
     }
 

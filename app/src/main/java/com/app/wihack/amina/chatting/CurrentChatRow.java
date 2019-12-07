@@ -29,7 +29,7 @@ public class CurrentChatRow extends CardView implements IBind {
     public void bind(Object o, int position) {
 
         Messages messages = (Messages) o;
-        if (position % 2 == 0) {
+        if (messages.getFrom().equals("1")) {
             senderMessageTextView.setVisibility(View.VISIBLE);
             senderMessageTextView.setText(messages.getMessage());
             receiverMessageTextView.setVisibility(View.INVISIBLE);

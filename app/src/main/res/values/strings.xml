@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Amina</string>
+    <string name="app_name">Amena</string>
     <string name="emergency">Emergency</string>
     <string name="chat">Chat</string>
     <string name="tab_to_init_emergency">Tab to start the Emergency</string>
@@ -11,7 +11,7 @@
     <string name="speciality">speciality</string>
     <string name="don_t_panic_stay_calm">Don\'t Panic Sarah, Stay Calm</string>
     <string name="emergency_cancel">Cancel The Emergency </string>
-    <string name="tab_to_start_the_emergency">Tab to start the emergency</string>
+    <string name="tab_to_start_the_emergency">Tab to quick report an Emergency</string>
     <string name="children_number">Children Number</string>
     <string name="search">Search</string>
     <string name="no_lists_message">Click the chat button to create a chat!</string>
@@ -23,5 +23,6 @@
     <string name="dummy_time">3:50 PM</string>
     <string name="emergency_call">Emergency Call</string>
     <string name="add_emergency_data">Add Emergency Data</string>
+    <string name="optional_data">Optional information</string>
 
 </resources>

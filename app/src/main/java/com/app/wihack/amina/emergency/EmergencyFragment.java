@@ -7,9 +7,8 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Spinner;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
@@ -31,8 +30,10 @@ public class EmergencyFragment extends Fragment {
     @ViewById(R.id.cancelButton) Button cancelEmergency;
     @ViewById(R.id.panic_message) TextView panicMessageTextView;
     @ViewById(R.id.tab_to_start_message) TextView tabToStartTextView;
-    @ViewById(R.id.children_no_edit_text) EditText childrenNumberEditText;
-    @ViewById(R.id.condition_spinner) Spinner conditionSpinner;
+    @ViewById(R.id.spinner_linear_layout) LinearLayout spinnerLinearLayout;
+    @ViewById(R.id.children_no_edit_text) TextView childrenNumberTextView;
+    @ViewById(R.id.optional_info_label) TextView optionalInfoTextView;
+
 
     public EmergencyFragment() {
     }
@@ -40,7 +41,7 @@ public class EmergencyFragment extends Fragment {
 
     @AfterViews
     public void after() {
-        SpannableString spannableString = new SpannableString(getString(R.string.tab_to_init_emergency));
+        SpannableString spannableString = new SpannableString(getString(R.string.tab_to_start_the_emergency));
         spannableString.setSpan(
                 new ForegroundColorSpan(Color.RED),
                 spannableString.length() - 10, spannableString.length(),
@@ -57,8 +58,10 @@ public class EmergencyFragment extends Fragment {
             cancelEmergency.setVisibility(View.VISIBLE);
             panicMessageTextView.setVisibility(View.VISIBLE);
             tabToStartTextView.setVisibility(View.INVISIBLE);
-            conditionSpinner.setVisibility(View.INVISIBLE);
-            childrenNumberEditText.setVisibility(View.INVISIBLE);
+            spinnerLinearLayout.setVisibility(View.INVISIBLE);
+            childrenNumberTextView.setVisibility(View.INVISIBLE);
+            optionalInfoTextView.setVisibility(View.INVISIBLE);
+
 
         }
     }
@@ -70,8 +73,10 @@ public class EmergencyFragment extends Fragment {
         cancelEmergency.setVisibility(View.INVISIBLE);
         panicMessageTextView.setVisibility(View.INVISIBLE);
         tabToStartTextView.setVisibility(View.VISIBLE);
-        conditionSpinner.setVisibility(View.VISIBLE);
-        childrenNumberEditText.setVisibility(View.VISIBLE);
+        spinnerLinearLayout.setVisibility(View.VISIBLE);
+        childrenNumberTextView.setVisibility(View.VISIBLE);
+        optionalInfoTextView.setVisibility(View.VISIBLE);
+
 
     }
 }

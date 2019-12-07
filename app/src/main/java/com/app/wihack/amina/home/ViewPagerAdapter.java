@@ -38,7 +38,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     private void setupViewPager() {
         addFragment(new ChattingFragment_());
-        addFragment(new AddEmergencyDataFragment_());
         addFragment(new EmergencyFragment_());
 
 

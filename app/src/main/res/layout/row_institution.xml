@@ -18,8 +18,6 @@
             android:layout_height="70dp"
             android:layout_marginStart="8dp"
             android:padding="8dp"
-            app:roundingBorderWidth="1dp"
-            app:roundingBorderColor="@color/textColorGray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -27,15 +25,24 @@
             app:placeholderImage="@drawable/img_aisha"
             app:placeholderImageScaleType="centerCrop"
             app:roundAsCircle="true"
-            app:roundedCornerRadius="8dp"/>
+            app:roundedCornerRadius="8dp"
+            app:roundingBorderColor="@color/textColorGray"
+            app:roundingBorderWidth="1dp"/>
 
         <TextView
             android:id="@+id/organization_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:maxWidth="200dp"
             android:text="@string/app_name"
             app:layout_constraintBottom_toBottomOf="@+id/organization_picture"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/organization_picture"
             app:layout_constraintTop_toTopOf="@+id/organization_picture"
             app:layout_constraintVertical_bias="0.060000002"/>
@@ -56,7 +63,7 @@
             android:id="@+id/organization_speciality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="24dp"
             android:text="@string/speciality"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/start_chat_image_button"
@@ -74,6 +81,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/organization_speciality"
             app:srcCompat="@drawable/ic_chat_red"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="280dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

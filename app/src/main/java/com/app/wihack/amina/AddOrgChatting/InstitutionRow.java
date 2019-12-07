@@ -51,6 +51,6 @@ public class InstitutionRow extends CardView implements IBind {
 
     @Click(R.id.start_chat_image_button)
     public void startChat() {
-        CurrentChatActivity_.intent(getContext()).start();
+        CurrentChatActivity_.intent(getContext()).organizationProfile(organizationProfile).start();
     }
 }

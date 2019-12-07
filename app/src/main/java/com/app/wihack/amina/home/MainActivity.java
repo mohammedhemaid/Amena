@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity
 
     @AfterViews
     public void after() {
+        setTitle(R.string.emergency);
+
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setCurrentItem(2);
@@ -50,12 +52,15 @@ public class MainActivity extends AppCompatActivity
         switch (menuItem.getItemId()) {
             case R.id.emergency_call:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(0));
+                setTitle(R.string.emergency);
                 return true;
             case R.id.chatting:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(1));
+                setTitle(R.string.chatting);
                 return true;
             case R.id.profile:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(2));
+                setTitle(R.string.profile);
                 return true;
         }
         return false;

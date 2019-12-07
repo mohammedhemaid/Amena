@@ -23,6 +23,7 @@ public class AddInstitutionChattingActivity extends AppCompatActivity {
 
     @AfterViews
     public void after() {
+        setTitle(R.string.choose_institution);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         OrganizationProfile.setContext(this);
         adapter = new RecycleViewAdapter();

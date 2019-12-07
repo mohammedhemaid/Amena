@@ -17,6 +17,7 @@ import com.app.wihack.amina.commonAdapter.RecycleViewAdapter;
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
@@ -28,6 +29,7 @@ public class CurrentChatActivity extends AppCompatActivity {
     @ViewById(R.id.send_chat_message_edit_text) EditText messageEditText;
     ArrayList<String> receiverMessagesArrayList = new ArrayList<>();
 
+    @Extra OrganizationProfile organizationProfile;
     int messageCount = 0;
     RecycleViewAdapter adapter;
 
@@ -35,6 +37,9 @@ public class CurrentChatActivity extends AppCompatActivity {
     public void after() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        if (organizationProfile != null) {
+            setTitle(organizationProfile.getOrganization_name());
+        }
         adapter = new RecycleViewAdapter();
         adapter.setData(Messages.getListMessages());
         adapter.setRecycleViewRes(R.layout.row_current_chat);

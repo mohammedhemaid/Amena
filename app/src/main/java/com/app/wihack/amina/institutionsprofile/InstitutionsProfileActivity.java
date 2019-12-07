@@ -1,9 +1,5 @@
 package com.app.wihack.amina.institutionsprofile;
 
-import android.app.Activity;
-import android.os.Build;
-import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
@@ -33,8 +29,8 @@ public class InstitutionsProfileActivity extends AppCompatActivity {
     @AfterViews
     public void after() {
         hideTop();
-
-        if (organizationProfile!=null){
+        if (organizationProfile != null) {
+            setTitle(organizationProfile.getOrganization_name());
             institutionProfilePicture.setImageResource(organizationProfile.getOrganization_picture());
             mInstitutionName.setText(organizationProfile.getOrganization_name());
         }
@@ -58,6 +54,6 @@ public class InstitutionsProfileActivity extends AppCompatActivity {
 
     @Click(R.id.nav_to_chat_button)
     public void navToChat() {
-        CurrentChatActivity_.intent(this).start();
+        CurrentChatActivity_.intent(this).organizationProfile(organizationProfile).start();
     }
 }

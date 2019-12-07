@@ -14,12 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".userprofile.UserProfileActivity_">
+        <activity android:name=".init.SplashScreenActivity_"
+        android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".userprofile.UserProfileActivity_">
         </activity>
         <activity android:name=".chatting.CurrentChatActivity_">
         </activity>
@@ -30,7 +33,6 @@
         <activity android:name=".AddOrgChatting.AddInstitutionChattingActivity_">
         </activity>
         <activity android:name=".home.MainActivity_">
-
         </activity>
     </application>
 

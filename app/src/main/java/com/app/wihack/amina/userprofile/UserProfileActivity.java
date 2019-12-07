@@ -26,7 +26,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
     @AfterViews
     public void after() {
-
+        setTitle(R.string.profile);
         getLocationPermission();
         forceRTLIfSupported();
     }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl"
     tools:context=".userprofile.UserProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,43 +16,64 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="This data is optional"
+            android:text="@string/optional_data"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <Spinner
-            android:id="@+id/condition_spinner"
+        <EditText
+            android:id="@+id/user_name_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:layout_weight="1"
-            android:entries="@array/spinner_conditions"
-            android:padding="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/children_no_edit_text"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            android:background="@drawable/border"
+            android:completionThreshold="1"
+            android:hint="@string/user_name"
+            android:inputType="number"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"/>
-
+        <EditText
+            android:id="@+id/age_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:completionThreshold="1"
+            android:hint="@string/age"
+            android:inputType="number"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name_edit_text"/>
         <EditText
             android:id="@+id/children_no_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:layout_weight="1"
             android:background="@drawable/border"
             android:completionThreshold="1"
-            android:hint="@string/children_number"
+            android:hint="@string/children_number_below_fifteen"
             android:inputType="number"
             android:padding="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/condition_spinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/condition_spinner"
-            app:layout_constraintTop_toTopOf="@+id/condition_spinner"/>
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_edit_text"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

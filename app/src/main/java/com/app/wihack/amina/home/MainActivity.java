@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
     public void after() {
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(2);
         bottomNavigationHandler();
         forceRTLIfSupported();
     }
@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(0));
                 return true;
             case R.id.chatting:
+                viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(1));
+                return true;
+            case R.id.profile:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(2));
                 return true;
         }

@@ -3,7 +3,7 @@
     <string-array name="spinner_conditions">
         <item>نوع الخطر</item>
         <item>تهديد بالقتل</item>
-        <item>ضرب</item>
+        <item>عنف جسدي</item>
         <item>اساءة جنسية</item>
         <item>مهددات بالقتل على خلفية الشرف</item>
         <item>تم الطرد من قبل العائلة أو الزوج</item>

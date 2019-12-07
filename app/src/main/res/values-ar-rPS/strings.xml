@@ -16,7 +16,7 @@
     <string name="location">المكان</string>
     <string name="mobile">رقم الموبايل</string>
     <string name="no_lists_message">اضغط على زر المحادثة لانشاء محادثة</string>
-    <string name="optional_data">معلومات اختيارية</string>
+    <string name="optional_data">هذه المعلومات اختيارية</string>
     <string name="search">البحث</string>
     <string name="speciality">التخصص</string>
     <string name="tab_to_start_the_emergency">اضغط لتبليغ سريع عن حالة طوارئ</string>
@@ -31,4 +31,6 @@
     <string name="research_center_and_legal_security">مركز الابحاث والاستشارات القانونية لحماية المراة</string>
     <string name="palestine_center_for_conflict">المركز الفلسطيني لحل النزاعات</string>
     <string name="red_cresent">الهلال الاحمر لقطاع غزة</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="age">العمر</string>
 </resources>

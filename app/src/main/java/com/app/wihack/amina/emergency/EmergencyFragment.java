@@ -21,6 +21,8 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
 
+import pl.bclogic.pulsator4droid.library.PulsatorLayout;
+
 @EFragment(R.layout.fragment_emergency)
 public class EmergencyFragment extends Fragment {
 
@@ -31,8 +33,8 @@ public class EmergencyFragment extends Fragment {
     @ViewById(R.id.panic_message) TextView panicMessageTextView;
     @ViewById(R.id.tab_to_start_message) TextView tabToStartTextView;
     @ViewById(R.id.spinner_linear_layout) LinearLayout spinnerLinearLayout;
-    @ViewById(R.id.children_no_edit_text) TextView childrenNumberTextView;
     @ViewById(R.id.optional_info_label) TextView optionalInfoTextView;
+    @ViewById(R.id.pulsator) PulsatorLayout pulsator;
 
 
     public EmergencyFragment() {
@@ -53,14 +55,15 @@ public class EmergencyFragment extends Fragment {
 
     @Click(R.id.emergencyimageButton)
     public void emergencyClick() {
+
         if (!emergencyState) {
             emergencyImageButton.setBackground(ContextCompat.getDrawable(getActivity(), R.drawable.bg_circle_red));
             cancelEmergency.setVisibility(View.VISIBLE);
             panicMessageTextView.setVisibility(View.VISIBLE);
             tabToStartTextView.setVisibility(View.INVISIBLE);
             spinnerLinearLayout.setVisibility(View.INVISIBLE);
-            childrenNumberTextView.setVisibility(View.INVISIBLE);
             optionalInfoTextView.setVisibility(View.INVISIBLE);
+            pulsator.start();
 
 
         }
@@ -74,8 +77,8 @@ public class EmergencyFragment extends Fragment {
         panicMessageTextView.setVisibility(View.INVISIBLE);
         tabToStartTextView.setVisibility(View.VISIBLE);
         spinnerLinearLayout.setVisibility(View.VISIBLE);
-        childrenNumberTextView.setVisibility(View.VISIBLE);
         optionalInfoTextView.setVisibility(View.VISIBLE);
+        pulsator.stop();
 
 
     }

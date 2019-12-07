@@ -12,4 +12,9 @@
         android:title="@string/chat"
         android:icon="@drawable/ic_chat_white"/>
 
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_iprofile_white"/>
+
 </menu>

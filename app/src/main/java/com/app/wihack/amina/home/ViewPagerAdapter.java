@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.app.wihack.amina.chatting.ChattingFragment_;
 import com.app.wihack.amina.emergency.EmergencyFragment_;
+import com.app.wihack.amina.userprofile.UserProfileFragment_;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     }
 
     private void setupViewPager() {
+        addFragment(new UserProfileFragment_());
         addFragment(new ChattingFragment_());
         addFragment(new EmergencyFragment_());
 

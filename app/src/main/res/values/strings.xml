@@ -19,7 +19,7 @@
     <string name="dummy_time">3:50 PM</string>
     <string name="emergency_call">مكالمة الطوارئ</string>
     <string name="add_emergency_data">اضافة بيانات الطوارئ</string>
-    <string name="optional_data">معلومات اختيارية</string>
+    <string name="optional_data">هذه المعلومات اختيارية</string>
     <string name="gaza_program_for_psyco_health">برنامج غزة للصحة النفسية</string>
     <string name="gaza_city">مدينة غزة</string>
     <string name="psyco_therapy">العلاج النفسي</string>
@@ -31,5 +31,9 @@
     <string name="research_center_and_legal_security">مركز الابحاث والاستشارات القانونية لحماية المراة</string>
     <string name="palestine_center_for_conflict">المركز الفلسطيني لحل النزاعات</string>
     <string name="red_cresent">الهلال الاحمر لقطاع غزة</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="children_number_below_fifteen">عدد الاطفال تحت سن ال15</string>
+    <string name="age">العمر</string>
 
 </resources>

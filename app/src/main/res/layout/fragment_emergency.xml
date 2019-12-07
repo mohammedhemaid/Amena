@@ -15,20 +15,44 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
-            <ImageButton
-                android:id="@+id/emergencyimageButton"
-                android:layout_width="255dp"
-                android:layout_height="255dp"
-                android:background="@drawable/bg_circle_light"
-                android:foreground="?attr/selectableItemBackgroundBorderless"
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.26"
-                app:srcCompat="@drawable/ic_add_emergency_red"/>
+                >
+
+                <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                    android:id="@+id/pulsator"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    app:pulse_count="14"
+                    android:layout_gravity="center"
+                    app:pulse_duration="2000"
+                    app:pulse_repeat="0"
+                    android:gravity="top"
+                    app:pulse_color="@color/colorAccent"
+                    app:pulse_startFromScratch="true"
+                    app:pulse_interpolator="Linear">
+
+                </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+                <ImageButton
+                    android:id="@+id/emergencyimageButton"
+                    android:layout_width="255dp"
+                    android:layout_height="255dp"
+                    android:background="@drawable/bg_circle_light"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/ic_emergency_call"/>
+            </FrameLayout>
 
             <Button
                 android:id="@+id/cancelButton"
@@ -38,7 +62,7 @@
                 android:layout_marginTop="120dp"
                 android:layout_marginBottom="32dp"
                 android:background="@color/emergencyRed"
-                android:drawableStart="@drawable/ic_add_emergency_white"
+                android:drawableStart="@drawable/ic_emergency_call_white"
                 android:drawablePadding="2dip"
                 android:gravity="center"
                 android:paddingStart="30dip"
@@ -64,7 +88,7 @@
                 android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout"/>
 
             <TextView
                 android:id="@+id/tab_to_start_message"
@@ -75,7 +99,7 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout"/>
 
             <TextView
                 android:id="@+id/optional_info_label"
@@ -109,24 +133,6 @@
                     android:paddingBottom="8dp"
                     />
             </LinearLayout>
-
-            <EditText
-                android:id="@+id/children_no_edit_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:completionThreshold="1"
-                android:hint="@string/children_number"
-                android:inputType="number"
-                android:padding="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinner_linear_layout"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

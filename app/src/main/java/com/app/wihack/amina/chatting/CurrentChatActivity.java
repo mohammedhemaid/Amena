@@ -21,7 +21,7 @@ public class CurrentChatActivity extends AppCompatActivity {
     public void after() {
         adapter = new RecycleViewAdapter();
         adapter.setData(Messages.getListMessages());
-        adapter.setRecycleViewRes(R.layout.row_institution);
+        adapter.setRecycleViewRes(R.layout.row_current_chat);
         listMessagesRecyclerView.setAdapter(adapter);
     }
 }

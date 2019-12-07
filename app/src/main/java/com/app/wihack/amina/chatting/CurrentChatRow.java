@@ -1,7 +1,6 @@
 package com.app.wihack.amina.chatting;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
@@ -32,16 +31,14 @@ public class CurrentChatRow extends CardView implements IBind {
         Messages messages = (Messages) o;
         if (position % 2 == 0) {
             senderMessageTextView.setVisibility(View.VISIBLE);
-            senderMessageTextView.setBackgroundResource(R.drawable.bg_sender_msg);
-            senderMessageTextView.setTextColor(Color.BLACK);
             senderMessageTextView.setText(messages.getMessage());
-        } else {
-            senderMessageTextView.setVisibility(View.INVISIBLE);
-            receiverMessageTextView.setVisibility(View.VISIBLE);
+            receiverMessageTextView.setVisibility(View.INVISIBLE);
 
-            receiverMessageTextView.setBackgroundResource(R.drawable.bg_receiver_msg);
-            receiverMessageTextView.setTextColor(Color.BLACK);
+        } else {
+            receiverMessageTextView.setVisibility(View.VISIBLE);
             receiverMessageTextView.setText(messages.getMessage());
+            senderMessageTextView.setVisibility(View.INVISIBLE);
+
         }
     }
 }

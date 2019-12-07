@@ -8,106 +8,74 @@
     android:background="@android:color/white"
     tools:context=".emergency.EmergencyFragment">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageButton
-            android:id="@+id/emergencyimageButton"
-            android:layout_width="255dp"
-            android:layout_height="255dp"
-            android:background="@drawable/bg_circle_light"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26"
-            app:srcCompat="@drawable/ic_add_emergency_red"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/cancelButton"
-            android:layout_width="250dp"
-            android:layout_height="60dip"
-            android:layout_gravity="center"
-            android:layout_marginTop="120dp"
-            android:layout_marginBottom="32dp"
-            android:background="@color/emergencyRed"
-            android:drawableStart="@drawable/ic_add_emergency_white"
-            android:drawablePadding="2dip"
-            android:gravity="center"
-            android:paddingStart="30dip"
-            android:paddingEnd="26dip"
-            android:singleLine="true"
-            android:text="@string/emergency_cancel"
-            android:textColor="@android:color/white"
-            android:textSize="12sp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/panic_message"
-            app:layout_constraintVertical_bias="1.0"/>
-
-        <TextView
-            android:id="@+id/panic_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/don_t_panic_stay_calm"
-            android:textSize="24sp"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
-
-        <TextView
-            android:id="@+id/tab_to_start_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="@string/tab_to_start_the_emergency"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
-
-
-            <Spinner
-                android:id="@+id/condition_spinner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="60dp"
-                android:entries="@array/spinner_conditions"
-                android:padding="8dp"
+            <ImageButton
+                android:id="@+id/emergencyimageButton"
+                android:layout_width="255dp"
+                android:layout_height="255dp"
+                android:background="@drawable/bg_circle_light"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/children_no_edit_text"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.26"
+                app:srcCompat="@drawable/ic_add_emergency_red"/>
 
-            <EditText
-                android:id="@+id/children_no_edit_text"
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="250dp"
+                android:layout_height="60dip"
+                android:layout_gravity="center"
+                android:layout_marginTop="120dp"
+                android:layout_marginBottom="32dp"
+                android:background="@color/emergencyRed"
+                android:drawableStart="@drawable/ic_add_emergency_white"
+                android:drawablePadding="2dip"
+                android:gravity="center"
+                android:paddingStart="30dip"
+                android:paddingEnd="26dip"
+                android:singleLine="true"
+                android:text="@string/emergency_cancel"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/panic_message"
+                app:layout_constraintVertical_bias="1.0"/>
+
+            <TextView
+                android:id="@+id/panic_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/border"
-                android:completionThreshold="1"
-                android:hint="@string/children_number"
-                android:inputType="number"
-                android:padding="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/condition_spinner"
+                android:layout_marginTop="32dp"
+                android:text="@string/don_t_panic_stay_calm"
+                android:textSize="24sp"
+                android:visibility="invisible"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/condition_spinner"
-                app:layout_constraintTop_toTopOf="@+id/condition_spinner"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
+
+            <TextView
+                android:id="@+id/tab_to_start_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/tab_to_start_the_emergency"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emergencyimageButton"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </FrameLayout>

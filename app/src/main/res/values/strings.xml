@@ -21,5 +21,7 @@
     <string name="email_dummy">info@aisha.ps</string>
     <string name="chat_with_amina">Chat with Amina</string>
     <string name="dummy_time">3:50 PM</string>
+    <string name="emergency_call">Emergency Call</string>
+    <string name="add_emergency_data">Add Emergency Data</string>
 
 </resources>

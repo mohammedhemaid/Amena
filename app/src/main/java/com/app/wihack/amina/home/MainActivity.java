@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity
     @AfterViews
     public void after() {
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-           viewPager.setAdapter(viewPagerAdapter);
-           viewPager.setCurrentItem(1);
+        viewPager.setAdapter(viewPagerAdapter);
+        viewPager.setCurrentItem(2);
         bottomNavigationHandler();
 
     }
@@ -38,12 +38,14 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
-            case R.id.emergency:
+            case R.id.emergency_call:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(0));
                 return true;
-
-            case R.id.chatting:
+            case R.id.emergency_data:
                 viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(1));
+                return true;
+            case R.id.chatting:
+                viewPager.setCurrentItem(viewPagerAdapter.rotatePosition(2));
                 return true;
         }
         return false;

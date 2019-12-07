@@ -1,8 +1,11 @@
 package com.app.wihack.amina.chatting;
 
+import android.os.Handler;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,7 +41,9 @@ public class CurrentChatActivity extends AppCompatActivity {
         listMessagesRecyclerView.setAdapter(adapter);
         receiverMessagesArrayList.add("Hello, How can I help you?");
         receiverMessagesArrayList.add("Thanks for contact us, We will reply soon");
-       forceRTLIfSupported();
+        receiverMessagesArrayList.add("Thanks for contact us, We will reply soon");
+        receiverMessagesArrayList.add("Thanks for contact us, We will reply soon");
+        forceRTLIfSupported();
     }
 
     private void forceRTLIfSupported() {
@@ -48,11 +53,20 @@ public class CurrentChatActivity extends AppCompatActivity {
     @Click(R.id.send_chat_message_ib)
     public void sendMessage() {
         String message = String.valueOf(messageEditText.getText());
+        if (TextUtils.isEmpty(messageEditText.getText())) {
+            Toast.makeText(this, R.string.write_message, Toast.LENGTH_SHORT).show();
+            return;
+        }
         Messages.setMessages("1", message);
-        Messages.setMessages("2", receiverMessagesArrayList.get(messageCount));
-        messageCount++;
         adapter.setData(Messages.getListMessages());
         messageEditText.setText("");
+        new Handler().postDelayed(() -> {
+                    Messages.setMessages("2", receiverMessagesArrayList.get(messageCount));
+                    messageCount++;
+                    adapter.setData(Messages.getListMessages());
+                }
+                , 1200);
+
     }
 
     @Override

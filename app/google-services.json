@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "595561469391",
+    "firebase_url": "https://amena-500a3.firebaseio.com",
+    "project_id": "amena-500a3",
+    "storage_bucket": "amena-500a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595561469391:android:e42e818017e10c82b5eeba",
+        "android_client_info": {
+          "package_name": "com.app.wihack.amina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "595561469391-8autuu7dp6r7r4nun57qk0u0a4n8nug8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwZ4D8SVswE7QIkeW6tH5-TL9_u6zDBh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "595561469391-8autuu7dp6r7r4nun57qk0u0a4n8nug8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -48,6 +48,7 @@ dependencies {
 
     implementation 'androidx.multidex:multidex:2.0.0'
 
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
     // Firebase Core
     implementation 'com.google.firebase:firebase-core:17.2.1'
     //Firebase Authentication
@@ -60,3 +61,4 @@ dependencies {
     implementation 'pl.bclogic:pulsator4droid:1.0.3'
 
 }
+apply plugin: 'com.google.gms.google-services'

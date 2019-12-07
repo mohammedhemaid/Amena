@@ -1,6 +1,9 @@
 package com.app.wihack.amina.home;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,7 +31,14 @@ public class MainActivity extends AppCompatActivity
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setCurrentItem(1);
         bottomNavigationHandler();
+        forceRTLIfSupported();
+    }
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    private void forceRTLIfSupported() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+        }
     }
 
     private void bottomNavigationHandler() {

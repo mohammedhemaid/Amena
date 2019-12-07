@@ -17,7 +17,11 @@ public class Messages {
         this.message = message;
     }
 
-    public static void setListOfMessages(String id , String message) {
+    public static void setListOfMessages(ArrayList<Messages> listOfMessages) {
+        Messages.listOfMessages = listOfMessages;
+    }
+
+    public static void setMessages(String id , String message) {
 
         listOfMessages.add(new Messages(id,message));
     }

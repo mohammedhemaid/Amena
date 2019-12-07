@@ -6,12 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:layoutDirection="rtl"
     tools:context=".institutionsprofile.InstitutionsProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       >
+        >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,10 +54,11 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/institutes_profile_picture"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
                     android:scaleType="centerCrop"
-                    app:placeholderImage="@drawable/profile"
+                    app:placeholderImage="@drawable/img_aisha"
                     app:placeholderImageScaleType="centerCrop"
                     />
 

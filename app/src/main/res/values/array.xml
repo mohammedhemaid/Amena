@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="spinner_conditions">
-        <item>Violence Type</item>
-        <item>Kill threat</item>
-        <item>Severe hit</item>
-        <item>Sexual abuse</item>
-        <item>Expulsion by family or spouse</item>
+        <item>نوع الخطر</item>
+        <item>تهديد بالقتل</item>
+        <item>ضرب</item>
+        <item>اساءة جنسية</item>
+        <item>مهددات بالقتل على خلفية الشرف</item>
+        <item>تم الطرد من قبل العائلة أو الزوج</item>
     </string-array>
 </resources>

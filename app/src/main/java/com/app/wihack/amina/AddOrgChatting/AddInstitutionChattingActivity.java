@@ -1,6 +1,7 @@
 package com.app.wihack.amina.AddOrgChatting;
 
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,11 +24,16 @@ public class AddInstitutionChattingActivity extends AppCompatActivity {
     @AfterViews
     public void after() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        OrganizationProfile.setContext(this);
         adapter = new RecycleViewAdapter();
         adapter.setData(OrganizationProfile.getOrganizationProfiles());
         adapter.setRecycleViewRes(R.layout.row_institution);
         institutesListRecyclerView.setAdapter(adapter);
+        forceRTLIfSupported();
+    }
+
+    private void forceRTLIfSupported() {
+        getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
     }
 
     @Override

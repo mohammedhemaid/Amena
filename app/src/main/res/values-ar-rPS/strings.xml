@@ -1,35 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">أمنة</string>
-    <string name="emergency">الطوارئ</string>
-    <string name="chat">المحادثة</string>
-    <string name="cancel">إلغاء</string>
-    <string name="location">المكان</string>
-    <string name="speciality">التخصص</string>
-    <string name="don_t_panic_stay_calm">لا تشعري بالخوف ابقي هادئة</string>
-    <string name="emergency_cancel">الفاء حالة الطوارئ</string>
-    <string name="tab_to_start_the_emergency">اضغط لتبليغ سريع عن حالة طوارئ</string>
-    <string name="children_number">عدد الاطفال</string>
-    <string name="search">البحث</string>
-    <string name="no_lists_message">اضغط على زر المحادثة لانشاء محادثة</string>
-    <string name="lorem_ipsum">هي خدمة إلكترونية مقدمة من وزارة العدل يقوم الزوج بتسجيل بيانات العقد وطلب حجز موعد مع المأذون عن طريق الخدمة ليتم إكمال عقد الزواج</string>
-    <string name="mobile">رقم الموبايل</string>
-    <string name="dummy_mobile">+972 59 97951915</string>
-    <string name="email_dummy">info@aisha.ps</string>
-    <string name="chat_with_amina">التحدث مع امنة</string>
-    <string name="dummy_time">3:50 PM</string>
-    <string name="emergency_call">مكالمة الطوارئ</string>
     <string name="add_emergency_data">اضافة بيانات الطوارئ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="chat">المحادثة</string>
+    <string name="children_number">عدد الاطفال</string>
+    <string name="chat_with_amina">التحدث مع امنة</string>
+    <string name="don_t_panic_stay_calm">لا تشعري بالخوف ابقي هادئة</string>
+    <string name="dummy_mobile">+972 59 97951915</string>
+    <string name="dummy_time">3:50 PM</string>
+    <string name="email_dummy">info@aisha.ps</string>
+    <string name="emergency">الطوارئ</string>
+    <string name="emergency_call">مكالمة الطوارئ</string>
+    <string name="emergency_cancel">الفاء حالة الطوارئ</string>
+    <string name="location">المكان</string>
+    <string name="mobile">رقم الموبايل</string>
+    <string name="no_lists_message">اضغط على زر المحادثة لانشاء محادثة</string>
     <string name="optional_data">معلومات اختيارية</string>
+    <string name="search">البحث</string>
+    <string name="speciality">التخصص</string>
+    <string name="tab_to_start_the_emergency">اضغط لتبليغ سريع عن حالة طوارئ</string>
+    <string name="lorem_ipsum">هي خدمة إلكترونية مقدمة من وزارة العدل يقوم الزوج بتسجيل بيانات العقد وطلب حجز موعد مع المأذون عن طريق الخدمة ليتم إكمال عقد الزواج</string>
     <string name="gaza_program_for_psyco_health">برنامج غزة للصحة النفسية</string>
     <string name="gaza_city">مدينة غزة</string>
     <string name="psyco_therapy">العلاج النفسي</string>
     <string name="specialization_above_fifteen">النساء والفتيات فوق سن الخامسة عشر</string>
     <string name="aisha_institutes">جمعية عائشة لحماية المراة بالطفل</string>
     <string name="research_center">مركز الابحاث والاستشارات القانونية</string>
-    <string name="culture_institutions">جمعية الثقافة والفكر الحر</string>
     <string name="save_place_org">بيت الامان للرعاية الاجتماعبة للنساء</string>
     <string name="research_center_and_legal_security">مركز الابحاث والاستشارات القانونية لحماية المراة</string>
     <string name="palestine_center_for_conflict">المركز الفلسطيني لحل النزاعات</string>
     <string name="red_cresent">الهلال الاحمر لقطاع غزة</string>
-
 </resources>

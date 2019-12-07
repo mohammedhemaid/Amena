@@ -4,7 +4,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.app.wihack.amina.addemergencydata.AddEmergencyDataFragment_;
 import com.app.wihack.amina.chatting.ChattingFragment_;
 import com.app.wihack.amina.emergency.EmergencyFragment_;
 

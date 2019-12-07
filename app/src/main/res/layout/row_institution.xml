@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.app.wihack.amina.AddOrgChatting.InstitutionRow_
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="8dp"
+    android:layoutDirection="rtl"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,11 +18,14 @@
             android:layout_height="70dp"
             android:layout_marginStart="8dp"
             android:padding="8dp"
+            app:roundingBorderWidth="1dp"
+            sh
+            app:roundingBorderColor="@color/textColorGray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.487"
-            app:placeholderImage="@drawable/profile"
+            app:placeholderImage="@drawable/img_aisha"
             app:placeholderImageScaleType="centerCrop"
             app:roundAsCircle="true"
             app:roundedCornerRadius="8dp"/>

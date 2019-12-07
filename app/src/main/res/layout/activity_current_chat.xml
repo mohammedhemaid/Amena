@@ -17,6 +17,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         android:paddingBottom="16dp"
+        android:layoutDirection="ltr"
         />
 
     <LinearLayout
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:padding="8dp"
+        android:layoutDirection="ltr"
         android:layout_alignParentBottom="true">
 
         <EditText

@@ -1,42 +1,48 @@
 package com.app.wihack.amina.chatting;
 
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.app.wihack.amina.R;
 import com.google.firebase.firestore.GeoPoint;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class OrganizationProfile implements Parcelable {
 
     private int organization_id;
-    private String organization_picture;
+    private int organization_picture;
     private String organization_name;
     private GeoPoint geo_point;
     private String organization_location;
     private String organization_speciality;
     private String organization_description;
     private String organization_mobileNumber;
+    static Context context;
 
-    public static ArrayList<OrganizationProfile> getOrganizationProfiles(){
-        ArrayList<OrganizationProfile> organizationProfiles = new ArrayList<>();
-        organizationProfiles.add(new OrganizationProfile(0,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(1,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(2,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(3,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(4,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(4,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(4,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(4,null,"hello","Gaza","women"));
-        organizationProfiles.add(new OrganizationProfile(4,null,"hello","Gaza","women"));
-
-    return organizationProfiles;
+    public static void setContext(Context context) {
+        OrganizationProfile.context = context;
     }
+
+    public static ArrayList<OrganizationProfile> getOrganizationProfiles() {
+        ArrayList<OrganizationProfile> organizationProfiles = new ArrayList<>();
+        organizationProfiles.add(new OrganizationProfile(0, R.drawable.img_psyco_center, context.getString(R.string.gaza_program_for_psyco_health), context.getResources().getString(R.string.gaza_city), context.getResources().getString(R.string.psyco_therapy)));
+        organizationProfiles.add(new OrganizationProfile(1, R.drawable.img_aisha, context.getString(R.string.aisha_institutes), context.getResources().getString(R.string.gaza_city), context.getResources().getString(R.string.specialization_above_fifteen)));
+        organizationProfiles.add(new OrganizationProfile(3, R.drawable.img_culture_institutes_and_free, context.getString(R.string.culture_institutions), context.getResources().getString(R.string.gaza_city), context.getResources().getString(R.string.specialization_above_fifteen)));
+        organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_save_home, context.getString(R.string.save_place_org), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_research_women, context.getString(R.string.research_center_and_legal_security), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(4, R.drawable.palestine_center_for_conflict, context.getString(R.string.palestine_center_for_conflict), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_red_crescent, context.getString(R.string.red_cresent), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(4, -1, "hello", "Gaza", "women"));
+
+        return organizationProfiles;
+    }
+
     public OrganizationProfile() {
     }
 
-    public OrganizationProfile(int organization_id, String organization_picture, String organization_name, String organization_location, String organization_speciality) {
+    public OrganizationProfile(int organization_id, int organization_picture, String organization_name, String organization_location, String organization_speciality) {
         this.organization_id = organization_id;
         this.organization_picture = organization_picture;
         this.organization_name = organization_name;
@@ -46,7 +52,7 @@ public class OrganizationProfile implements Parcelable {
 
     protected OrganizationProfile(Parcel in) {
         organization_id = in.readInt();
-        organization_picture = in.readString();
+        organization_picture = in.readInt();
         organization_name = in.readString();
         organization_location = in.readString();
         organization_speciality = in.readString();
@@ -57,7 +63,7 @@ public class OrganizationProfile implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(organization_id);
-        dest.writeString(organization_picture);
+        dest.writeInt(organization_picture);
         dest.writeString(organization_name);
         dest.writeString(organization_location);
         dest.writeString(organization_speciality);
@@ -90,11 +96,11 @@ public class OrganizationProfile implements Parcelable {
         this.organization_id = organization_id;
     }
 
-    public String getOrganization_picture() {
+    public int getOrganization_picture() {
         return organization_picture;
     }
 
-    public void setOrganization_picture(String organization_picture) {
+    public void setOrganization_picture(int organization_picture) {
         this.organization_picture = organization_picture;
     }
 

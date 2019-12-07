@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layoutDirection="rtl"
     android:layout_height="88dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +21,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.487"
-            app:placeholderImage="@drawable/profile"
+            app:placeholderImage="@drawable/img_aisha"
             app:placeholderImageScaleType="centerCrop"
             app:roundAsCircle="true"
             app:roundedCornerRadius="8dp"/>

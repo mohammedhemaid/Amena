@@ -31,10 +31,9 @@ public class OrganizationProfile implements Parcelable {
         organizationProfiles.add(new OrganizationProfile(1, R.drawable.img_aisha, context.getString(R.string.aisha_institutes), context.getResources().getString(R.string.gaza_city), context.getResources().getString(R.string.specialization_above_fifteen)));
         organizationProfiles.add(new OrganizationProfile(3, R.drawable.img_culture_institutes_and_free, context.getString(R.string.culture_institutions), context.getResources().getString(R.string.gaza_city), context.getResources().getString(R.string.specialization_above_fifteen)));
         organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_save_home, context.getString(R.string.save_place_org), "Gaza", "women"));
-        organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_research_women, context.getString(R.string.research_center_and_legal_security), "Gaza", "women"));
-        organizationProfiles.add(new OrganizationProfile(4, R.drawable.palestine_center_for_conflict, context.getString(R.string.palestine_center_for_conflict), "Gaza", "women"));
-        organizationProfiles.add(new OrganizationProfile(4, R.drawable.img_red_crescent, context.getString(R.string.red_cresent), "Gaza", "women"));
-        organizationProfiles.add(new OrganizationProfile(4, -1, "hello", "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(5, R.drawable.img_research_women, context.getString(R.string.research_center_and_legal_security), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(6, R.drawable.palestine_center_for_conflict, context.getString(R.string.palestine_center_for_conflict), "Gaza", "women"));
+        organizationProfiles.add(new OrganizationProfile(7, R.drawable.img_red_crescent, context.getString(R.string.red_cresent), "Gaza", "women"));
 
         return organizationProfiles;
     }

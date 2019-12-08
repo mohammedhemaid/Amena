@@ -2,6 +2,7 @@ package com.app.wihack.amina.userprofile;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -65,11 +66,23 @@ public class UserProfileActivity extends AppCompatActivity {
 
     @Click(R.id.done)
     public void doneClick() {
-    String name = String.valueOf(mUserNameEditText.getText());
-    int age = Integer.parseInt(String.valueOf(mAgeEditText.getText()));
-    int childrenNumber = Integer.parseInt(String.valueOf(mChildrenNoEditText.getText()));
+        String name = "none";
+        int age = 0;
+        int childrenNumber = 0;
+        if (!TextUtils.isEmpty(mUserNameEditText.getText())) {
+            name = String.valueOf(mUserNameEditText.getText());
 
-        UserProfile userProfile = new UserProfile(name,age,childrenNumber);
+        }
+        if (!TextUtils.isEmpty(mAgeEditText.getText())) {
+            age = Integer.parseInt(String.valueOf(mAgeEditText.getText()));
+
+        }
+        if (!TextUtils.isEmpty(mChildrenNoEditText.getText())) {
+            childrenNumber = Integer.parseInt(String.valueOf(mChildrenNoEditText.getText()));
+        }
+
+
+        UserProfile userProfile = new UserProfile(name, age, childrenNumber);
         mDb.collection("users")
                 .document("1")
                 .set(userProfile);

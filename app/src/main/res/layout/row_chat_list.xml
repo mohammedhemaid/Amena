@@ -34,6 +34,7 @@
             android:text="@string/aisha_institutes"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:maxWidth="200dp"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="@+id/organization_picture"
             app:layout_constraintStart_toEndOf="@+id/organization_picture"

@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.setCurrentItem(2);
+        viewPager.setOffscreenPageLimit(3);
         bottomNavigationHandler();
         forceRTLIfSupported();
     }

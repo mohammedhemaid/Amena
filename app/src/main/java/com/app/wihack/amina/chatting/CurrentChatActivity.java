@@ -25,11 +25,14 @@ import java.util.ArrayList;
 @EActivity(R.layout.activity_current_chat)
 public class CurrentChatActivity extends AppCompatActivity {
 
+    public static final String FROM_PAGE = "from_current_chats";
     @ViewById(R.id.private_list_messages) RecyclerView listMessagesRecyclerView;
     @ViewById(R.id.send_chat_message_edit_text) EditText messageEditText;
     ArrayList<String> receiverMessagesArrayList = new ArrayList<>();
 
     @Extra OrganizationProfile organizationProfile;
+    @Extra boolean from;
+
     int messageCount = 0;
     RecycleViewAdapter adapter;
 
@@ -49,6 +52,20 @@ public class CurrentChatActivity extends AppCompatActivity {
         receiverMessagesArrayList.add("Thanks for contact us, We will reply soon");
         receiverMessagesArrayList.add("Thanks for contact us, We will reply soon");
         forceRTLIfSupported();
+        if (from) {
+            dummyChat();
+        }
+    }
+
+    public void dummyChat() {
+        ArrayList<Messages> dummyChat = new ArrayList<>();
+
+        dummyChat.add(new Messages("1", "Hello"));
+        dummyChat.add(new Messages("2", "Hello, How can I help you?"));
+        dummyChat.add(new Messages("1", "I am facing a problem with my family and I need help"));
+        dummyChat.add(new Messages("1", "He still hitting me I afraid about me and my children"));
+        dummyChat.add(new Messages("2", "ok, don't worry"));
+        adapter.setData(dummyChat);
     }
 
     private void forceRTLIfSupported() {

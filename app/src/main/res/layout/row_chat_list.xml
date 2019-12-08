@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/app_name"
+            android:text="@string/aisha_institutes"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/black"

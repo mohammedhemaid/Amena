@@ -58,8 +58,8 @@ public class CurrentChatActivity extends AppCompatActivity {
     }
 
     public void dummyChat() {
+        setTitle(R.string.aisha_institutes);
         ArrayList<Messages> dummyChat = new ArrayList<>();
-
         dummyChat.add(new Messages("1", "Hello"));
         dummyChat.add(new Messages("2", "Hello, How can I help you?"));
         dummyChat.add(new Messages("1", "I am facing a problem with my family and I need help"));

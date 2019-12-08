@@ -27,9 +27,12 @@ public class ChattingFragment extends Fragment {
 
     @AfterViews
     public void after() {
+        OrganizationProfile.setContext(getContext());
+        ArrayList<OrganizationProfile> listOfChat = new ArrayList<>();
+        listOfChat.add(OrganizationProfile.getOrganizationProfiles().get(2));
         adapter = new RecycleViewAdapter();
-        adapter.setData(new ArrayList<>());
-        adapter.setRecycleViewRes(R.layout.row_institution);
+        adapter.setData(listOfChat);
+        adapter.setRecycleViewRes(R.layout.row_chat_list);
         institutesListRecyclerView.setAdapter(adapter);
     }
 

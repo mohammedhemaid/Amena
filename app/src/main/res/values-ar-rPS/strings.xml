@@ -34,4 +34,8 @@
     <string name="user_name">اسم المستخدم</string>
     <string name="age">العمر</string>
     <string name="write_message">الرجاء كتابة رسالة</string>
+    <string name="done">تم</string>
+    <string name="profile">الحساب الشخصي</string>
+    <string name="chatting">المحادثات</string>
+    <string name="choose_institution">اختار مؤسسة</string>
 </resources>

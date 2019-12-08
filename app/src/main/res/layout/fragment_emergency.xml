@@ -36,8 +36,8 @@
                     android:layout_gravity="center"
                     android:gravity="top"
                     app:pulse_color="@color/colorAccent"
-                    app:pulse_count="14"
-                    app:pulse_duration="2000"
+                    app:pulse_count="7"
+                    app:pulse_duration="3000"
                     app:pulse_interpolator="Linear"
                     app:pulse_repeat="0"
                     app:pulse_startFromScratch="true">

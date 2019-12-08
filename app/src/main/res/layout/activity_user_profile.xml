@@ -16,7 +16,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"
             android:textColor="@android:color/black"
             android:text="@string/optional_data"
@@ -76,6 +76,21 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/age_edit_text"/>
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/done"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@android:color/white"
+            android:background="@color/emergencyRed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

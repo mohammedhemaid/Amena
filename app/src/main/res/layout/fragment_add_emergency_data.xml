@@ -34,7 +34,7 @@
             android:background="@drawable/border"
             android:completionThreshold="1"
             android:hint="@string/user_name"
-            android:inputType="number"
+            android:inputType="text"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

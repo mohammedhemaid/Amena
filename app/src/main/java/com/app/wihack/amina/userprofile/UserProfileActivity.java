@@ -1,7 +1,9 @@
 package com.app.wihack.amina.userprofile;
 
+import android.Manifest;
 import android.content.pm.PackageManager;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +12,7 @@ import androidx.core.content.ContextCompat;
 
 import com.app.wihack.amina.R;
 import com.app.wihack.amina.home.MainActivity_;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -23,10 +26,17 @@ public class UserProfileActivity extends AppCompatActivity {
     public static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 9003;
 
     @ViewById(R.id.done) TextView doneTextView;
+    @ViewById(R.id.user_name_edit_text) EditText mUserNameEditText;
+    @ViewById(R.id.age_edit_text) EditText mAgeEditText;
+    @ViewById(R.id.children_no_edit_text) EditText mChildrenNoEditText;
+
+    private FirebaseFirestore mDb;
 
     @AfterViews
     public void after() {
         setTitle(R.string.profile);
+        mDb = FirebaseFirestore.getInstance();
+
         getLocationPermission();
         forceRTLIfSupported();
     }
@@ -42,19 +52,27 @@ public class UserProfileActivity extends AppCompatActivity {
          * onRequestPermissionsResult.
          */
         if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
-                android.Manifest.permission.ACCESS_FINE_LOCATION)
+                Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mLocationPermissionGranted = true;
 
         } else {
             ActivityCompat.requestPermissions(this,
-                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                     PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
         }
     }
 
     @Click(R.id.done)
     public void doneClick() {
+    String name = String.valueOf(mUserNameEditText.getText());
+    int age = Integer.parseInt(String.valueOf(mAgeEditText.getText()));
+    int childrenNumber = Integer.parseInt(String.valueOf(mChildrenNoEditText.getText()));
+
+        UserProfile userProfile = new UserProfile(name,age,childrenNumber);
+        mDb.collection("users")
+                .document("1")
+                .set(userProfile);
         MainActivity_.intent(this).start();
     }
 }

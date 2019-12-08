@@ -23,6 +23,8 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
 
@@ -81,25 +83,36 @@ public class EmergencyFragment extends Fragment {
             optionalInfoTextView.setVisibility(View.INVISIBLE);
             pulsator.start();
 
-            UserProfile userProfile = new UserProfile("Sarah", "hitting", 15, 3, null);
-
-            fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+            DocumentReference docRef = mDb.collection("users").document("1");
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override
-                public void onComplete(@NonNull Task<Location> task) {
-
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                     if (task.isSuccessful()) {
-                        Location location = task.getResult();
-                        GeoPoint geoPoint = new GeoPoint(location.getLatitude(), location.getLongitude());
-                        Log.d(TAG, "onComplete: latitude " + geoPoint.getLatitude());
-                        Log.d(TAG, "onComplete: longitude " + geoPoint.getLongitude());
+                        UserProfile userProfile = task.getResult().toObject(UserProfile.class);
+                        userProfile.setViolence_type("عنف جسدي");
+                        fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Location> task) {
 
-                        userProfile.setGeo_point(geoPoint);
-                        mDb.collection("violenced_users")
-                                .document("1")
-                                .set(userProfile);
+                                if (task.isSuccessful()) {
+                                    Location location = task.getResult();
+                                    GeoPoint geoPoint = new GeoPoint(location.getLatitude(), location.getLongitude());
+                                    Log.d(TAG, "onComplete: latitude " + geoPoint.getLatitude());
+                                    Log.d(TAG, "onComplete: longitude " + geoPoint.getLongitude());
+
+                                    userProfile.setGeo_point(geoPoint);
+                                    mDb.collection("violenced_users")
+                                            .document("1")
+                                            .set(userProfile);
+                                }
+                            }
+                        });
+                    } else {
+                        Log.d(TAG, "get failed with ", task.getException());
                     }
                 }
             });
+
 
         }
 

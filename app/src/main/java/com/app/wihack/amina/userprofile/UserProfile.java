@@ -4,6 +4,9 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.ServerTimestamp;
+
+import java.util.Date;
 
 public class UserProfile implements Parcelable {
 
@@ -12,16 +15,24 @@ public class UserProfile implements Parcelable {
     private int age;
     private int children_number;
     private GeoPoint geo_point;
+    private @ServerTimestamp Date timeStamp;
 
-    public UserProfile(String username, String violence_type, int age, int children_number, GeoPoint geo_point) {
+    public UserProfile() {
+    }
+
+    public UserProfile(String username, int age, int children_number) {
+        this.username = username;
+        this.age = age;
+        this.children_number = children_number;
+    }
+
+    public UserProfile(String username, String violence_type, int age, int children_number, GeoPoint geo_point, Date timeStamp) {
         this.username = username;
         this.violence_type = violence_type;
         this.age = age;
         this.children_number = children_number;
         this.geo_point = geo_point;
-    }
-
-    public UserProfile() {
+        this.timeStamp = timeStamp;
     }
 
     protected UserProfile(Parcel in) {
@@ -94,5 +105,13 @@ public class UserProfile implements Parcelable {
 
     public void setGeo_point(GeoPoint geo_point) {
         this.geo_point = geo_point;
+    }
+
+    public Date getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(Date timeStamp) {
+        this.timeStamp = timeStamp;
     }
 }
